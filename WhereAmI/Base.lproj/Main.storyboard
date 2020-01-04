@@ -19,10 +19,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DI2-Bb-P2Y">
+                                <rect key="frame" x="65" y="415" width="283" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="TFx-e7-Cg7" kind="show" id="s7u-fO-OgR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="finishLaunching" destination="DI2-Bb-P2Y" id="xMu-Im-RN0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="F1X-Ql-Og7">
@@ -38,38 +48,39 @@
             <objects>
                 <viewController id="TFx-e7-Cg7" customClass="ViewController" customModule="WhereAmI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A98-z0-OKh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wFY-sD-MsM">
-                                <rect key="frame" x="0.0" y="44" width="414" height="666"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="656"/>
                                 <subviews>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Oem-GN-zFF">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="656"/>
                                     </mapView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D1k-VS-Pdh">
-                                <rect key="frame" x="184" y="832" width="46" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98C-eO-U5N">
-                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98C-eO-U5N">
+                                <rect key="frame" x="101" y="740" width="212" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Calculate My Current Location "/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="wFY-sD-MsM" secondAttribute="bottom" constant="186" id="44V-fy-5y6"/>
+                            <constraint firstItem="4xU-Ii-tNA" firstAttribute="bottom" secondItem="98C-eO-U5N" secondAttribute="bottom" constant="38" id="Eni-Yd-3lf"/>
+                            <constraint firstItem="98C-eO-U5N" firstAttribute="top" secondItem="wFY-sD-MsM" secondAttribute="bottom" constant="84" id="Iat-7M-e5d"/>
+                            <constraint firstItem="98C-eO-U5N" firstAttribute="leading" secondItem="4xU-Ii-tNA" secondAttribute="leading" constant="101" id="L19-uy-7SQ"/>
+                            <constraint firstItem="4xU-Ii-tNA" firstAttribute="trailing" secondItem="98C-eO-U5N" secondAttribute="trailing" constant="101" id="MfQ-6z-rYd"/>
                             <constraint firstItem="wFY-sD-MsM" firstAttribute="trailing" secondItem="4xU-Ii-tNA" secondAttribute="trailing" id="Ri5-yl-8Ii"/>
                             <constraint firstItem="wFY-sD-MsM" firstAttribute="leading" secondItem="4xU-Ii-tNA" secondAttribute="leading" id="UGS-de-AiF"/>
                             <constraint firstItem="wFY-sD-MsM" firstAttribute="top" secondItem="4xU-Ii-tNA" secondAttribute="top" id="lTj-Ju-wnq"/>
-                            <constraint firstItem="D1k-VS-Pdh" firstAttribute="top" secondItem="wFY-sD-MsM" secondAttribute="bottom" constant="122" id="mPS-pb-UgJ"/>
                             <constraint firstItem="wFY-sD-MsM" firstAttribute="top" secondItem="4xU-Ii-tNA" secondAttribute="top" id="osa-i7-cqJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4xU-Ii-tNA"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8I4-dn-WV7"/>
                     <connections>
                         <outlet property="mapView" destination="Oem-GN-zFF" id="EgM-Bh-BP4"/>
                     </connections>
