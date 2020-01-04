@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,41 +12,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WhereAmI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cId-Uq-phZ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="414"/>
-                                <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="j4w-Ga-181">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="414"/>
-                                    </mapView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rSU-mx-jOg">
-                                <rect key="frame" x="184" y="536" width="46" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bro-dD-snR">
-                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iPhone 11 Pro Launchscreen" translatesAutoresizingMaskIntoConstraints="NO" id="CrM-Ni-BJ5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="cId-Uq-phZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DaH-Zw-X5g"/>
-                            <constraint firstItem="cId-Uq-phZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="EA2-9R-4xg"/>
-                            <constraint firstItem="cId-Uq-phZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bmM-R5-4IK"/>
-                            <constraint firstItem="cId-Uq-phZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cY5-Qf-jC9"/>
-                            <constraint firstAttribute="bottom" secondItem="cId-Uq-phZ" secondAttribute="bottom" constant="186" id="mPe-HX-t1p"/>
-                            <constraint firstItem="rSU-mx-jOg" firstAttribute="top" secondItem="cId-Uq-phZ" secondAttribute="bottom" constant="122" id="qMp-UU-vmU"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="mapView" destination="j4w-Ga-181" id="dAk-4H-Yw7"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="F1X-Ql-Og7">
@@ -54,7 +31,60 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="103.79464285714285"/>
+            <point key="canvasLocation" x="-46.376811594202906" y="132.58928571428572"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lpN-a7-zYz">
+            <objects>
+                <viewController id="TFx-e7-Cg7" customClass="ViewController" customModule="WhereAmI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A98-z0-OKh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wFY-sD-MsM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="666"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Oem-GN-zFF">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="666"/>
+                                    </mapView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D1k-VS-Pdh">
+                                <rect key="frame" x="184" y="832" width="46" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98C-eO-U5N">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="wFY-sD-MsM" secondAttribute="bottom" constant="186" id="44V-fy-5y6"/>
+                            <constraint firstItem="wFY-sD-MsM" firstAttribute="trailing" secondItem="4xU-Ii-tNA" secondAttribute="trailing" id="Ri5-yl-8Ii"/>
+                            <constraint firstItem="wFY-sD-MsM" firstAttribute="leading" secondItem="4xU-Ii-tNA" secondAttribute="leading" id="UGS-de-AiF"/>
+                            <constraint firstItem="wFY-sD-MsM" firstAttribute="top" secondItem="4xU-Ii-tNA" secondAttribute="top" id="lTj-Ju-wnq"/>
+                            <constraint firstItem="D1k-VS-Pdh" firstAttribute="top" secondItem="wFY-sD-MsM" secondAttribute="bottom" constant="122" id="mPS-pb-UgJ"/>
+                            <constraint firstItem="wFY-sD-MsM" firstAttribute="top" secondItem="4xU-Ii-tNA" secondAttribute="top" id="osa-i7-cqJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4xU-Ii-tNA"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Oem-GN-zFF" id="EgM-Bh-BP4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R5r-5X-d2n" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Nev-yG-zmf">
+                    <connections>
+                        <action selector="longPress:" destination="TFx-e7-Cg7" id="Uwe-sp-Ye5"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="801" y="133"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iPhone 11 Pro Launchscreen" width="187.5" height="406"/>
+    </resources>
 </document>

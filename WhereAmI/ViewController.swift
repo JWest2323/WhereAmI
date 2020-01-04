@@ -18,15 +18,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         let locationManager = CLLocationManager()
+        let locManager = locationManager as? CLLocation
         locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
-            centerMapOnLocation(location: locationManager)
-            mapView.setRegion(coordinateRegion, animated: true)
-        }
+            }
         
     }
 
@@ -38,7 +37,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
 // code snippet to center map radius
 let regionRadius: CLLocationDistance = 1000
-func centerMapOnLocation(location: CLLocation) {
+func centerMapOnLocation(location: CLLocationManager) {
     let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
                                               latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
   
